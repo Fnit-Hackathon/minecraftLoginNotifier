@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LoginNotifier:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LoginNotifier_jar</output-path>
+    <root id="archive" name="LoginNotifier.jar">
+      <element id="module-output" name="LoginNotifier" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/spigot-api-1.11.2-R0.1-20170102.051603-21.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
