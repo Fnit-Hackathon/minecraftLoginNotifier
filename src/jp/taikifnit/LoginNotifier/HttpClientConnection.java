@@ -5,6 +5,8 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
+
+import com.oracle.javafx.jmx.json.JSONException;
 import org.bukkit.Bukkit;
 
 /**
@@ -41,7 +43,16 @@ public class HttpClientConnection {
 
             writer.flush();
             if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                // ok!
+                try (InputStreamReader isr = new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8);
+                BufferedReader reader = new BufferedReader(isr)) {
+                    String line;
+                    while((line = reader.readLine()) != null) {
+                        System.out.println("[LoginNotifier] " + line);
+                    }
+                }
+            }
+            else {
+
             }
         } finally {
             if (connection != null) {

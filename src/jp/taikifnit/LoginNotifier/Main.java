@@ -14,9 +14,9 @@ public class Main extends JavaPlugin{
     @Override
     public void onEnable() {
         config.addDefault("url", "https://slack.com/api/chat.postMessage");
+        config.addDefault("channel", "general");
+        config.addDefault("bot_name", "LoginNotifier");
         config.addDefault("token", "token_is_here");
-        config.addDefault("channel", "minecraft_login_alert");
-        config.addDefault("bot_name", "MC_LNbot");
         config.options().copyDefaults(true);
         saveConfig();
 
