@@ -39,7 +39,8 @@ public class HttpClientConnection {
             connection.setRequestMethod("POST");
 
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), StandardCharsets.UTF_8));
-            writer.write("token="+ token +"&channel=" + channel + "&text="+ message + "&username=" + username);
+            //writer.write("token="+ token +"&channel=" + channel + "&text="+ message + "&username=" + username);
+            writer.write("payload={\"channel\": " + channel + "\", " + username + ": \"" + username + "\", \"text\": \"" + message + "\", \"icon_emoji\": \":ghost:\"}");
 
             writer.flush();
             if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {

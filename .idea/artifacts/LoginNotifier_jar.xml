@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/LoginNotifier_jar</output-path>
     <root id="archive" name="LoginNotifier.jar">
       <element id="module-output" name="LoginNotifier" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/spigot-api-1.11.2-R0.1-20170102.051603-21.jar" path-in-jar="/" />
+      <element id="file-copy" path="$USER_HOME$/mcplugins/spigot-api-1.12-R0.1-20170707.051359-45.jar" />
     </root>
   </artifact>
 </component>
